@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script>
+                let evenrandomnumber = Math.floor(Math.random() * 20 / 2 ) * 2;
+                let guess;
+                let attempt = 5; 
+
+                while (guess != evenrandomnumber) {
+                    guess = parseInt(prompt("guess an even number between 1 and 20"));
+                    attempt++;
+
+                if (guess <= 0 ) {
+                    alert("positive integers only")
+                }
+                else if (guess > evenrandomnumber && guess % 2 == 0) {
+                    alert("too high! keep trying")
+                }
+                else if (guess < evenrandomnumber && guess % 2 != 0) {
+                    alert("too low! go higher.even   numbers only")
+                }
+                else if (guess < evenrandomnumber && guess % 2 == 0) {
+                    alert("too low! go higher")
+                }
+                else if (guess > evenrandomnumber && guess % 2 != 0) {
+                    alert("too high! keep trying.even numbers only ")
+                }
+                else if (isNaN(guess)) {
+                    alert("Please enter a number")
+                }
+                // else if (guess % 2 != 0) {
+                //     alert("even numbers only")
+                // }
+                else {
+                    alert("smart! you guessed the correct number")
+                } 
+                    
+                }
+            </script>
+        </body>
+    </head>
+</html>
